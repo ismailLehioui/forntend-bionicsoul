@@ -1,29 +1,32 @@
-import React from 'react'
-import Navbar from './components/Navbar'
-import Header from './components/Header'
-import Service from './pages/Service'
-import PortFolio from './pages/PortFolio'
-import About from './pages/About'
-import Client from './pages/Client'
+import React, { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+import About from './pages/about/About'
 import Team from './pages/Team'
 import Contact from './pages/Contact'
-import Footer from './components/Footer'
-import ModalGroupe from './pages/ModalGroupe'
+
+import Home from './components/Home'
+
+// import Galerie from './pages/galerie/Galerie'
 
 function App() {
   return (
-    <div>
-      <Navbar />
-      <Header />
-      <Service />
-      <PortFolio />
-      <About />
-      <Team />
-      <Client />
-      <Contact />
-      <Footer />
-      <ModalGroupe />
-    </div>
+    <>
+
+      <BrowserRouter >
+        <Routes>
+
+          <Route path="/" element={<Home />}>
+            <Route path="about" element={<About />} />
+            <Route path="team" element={<Team />} />
+            <Route path="contact" element={<Contact />} />
+
+          </Route>
+
+        </Routes>
+      </BrowserRouter>
+
+
+    </>
   )
 }
 
