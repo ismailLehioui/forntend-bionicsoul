@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom';
 import Footer from './Footer';
 import Navbar from './Navbar';
 import Header from './Header';
+import Contact from '../pages/Contact';
 
 
 function Home() {
@@ -11,6 +12,7 @@ function Home() {
             <Navbar />
             <Header />
             <Outlet />
+            <Contact />
             <Footer />
 
 

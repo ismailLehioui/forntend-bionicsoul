@@ -1,5 +1,6 @@
 import React from 'react'
 import './style.css'; // Assurez-vous de créer ce fichier CSS
+import { Link } from 'react-router-dom';
 
 
 function Navbar() {
@@ -13,11 +14,12 @@ function Navbar() {
         </button>
         <div className="collapse navbar-collapse" id="navbarResponsive">
           <ul className="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+            <li className="nav-item"><Link to="/" className="nav-link" href="#about">Home</Link></li>
             <li className="nav-item"><a className="nav-link" href="#services">Services</a></li>
             <li className="nav-item"><a className="nav-link" href="#portfolio">Portfolio</a></li>
-            <li className="nav-item"><a className="nav-link" href="#about">About Us</a></li>
+            <li className="nav-item"><Link to="/about" className="nav-link" href="#about">About Us</Link></li>
             <li className="nav-item"><a className="nav-link" href="#team">Team</a></li>
-            <li className="nav-item"><a className="nav-link" href="#contact">Contact</a></li>
+            {/* <li className="nav-item"><Link to="/contact" className="nav-link" href="#about">CONTACT</Link></li> */}
           </ul>
         </div>
       </div>
