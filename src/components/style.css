@@ -2,9 +2,44 @@
     width: 150px;
     height: auto;
 } */
+
 .navbar-brand img {
     width: 150px;
     /* Ajustez la largeur selon vos besoins */
     height: 100;
     /* Pour maintenir les proportions de l'image */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.fade-in {
+    animation-name: fadeIn;
+}
+
+/* Animation example for masthead-heading */
+.masthead-heading {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.glow-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 5px #ffe51f, 0 0 10px #ffe51f, 0 0 15px #ffe51f, 0 0 20px #ffe51f, 0 0 25px #ff6f61;
+    text-align: center;
 }

@@ -5,8 +5,8 @@ import Team from './pages/Team'
 import Contact from './pages/Contact'
 
 import Home from './components/Home'
-
-// import Galerie from './pages/galerie/Galerie'
+import Presentation from './pages/Presentation';
+import Achievements from './pages/Achievements'
 
 function App() {
   return (
@@ -16,9 +16,15 @@ function App() {
         <Routes>
 
           <Route path="/" element={<Home />}>
+            <Route path="/" element={<Presentation />} />
             <Route path="about" element={<About />} />
             <Route path="team" element={<Team />} />
             <Route path="contact" element={<Contact />} />
+            <Route path="achievement" element={<Achievements />} />
+
+
+
+            {/* <Route path="galerie" element={<Galerie />} /> */}
             {/* <Route path="contact" element={<Contact />} />
             <Route path="contact" element={<Contact />} />
             <Route path="contact" element={<Contact />} /> */}
