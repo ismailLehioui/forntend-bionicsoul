@@ -1,51 +1,50 @@
-import React from 'react'
+// import React from 'react';
+// import { useInView } from 'react-intersection-observer';
+// import './Team.css'; // Assurez-vous que le fichier CSS est importé
 
-function Team() {
-    return (
-        // <!-- Team-->
-        <section className="page-section bg-light" id="team">
-            <div className="container">
-                <div className="text-center">
-                    <h2 className="section-heading text-uppercase">Our Amazing Team</h2>
-                    <h3 className="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                </div>
-                <div className="row">
-                    <div className="col-lg-4">
-                        <div className="team-member">
-                            <img className="mx-auto rounded-circle" src="assets/assets/img/team/1.jpg" alt="..." />
-                            <h4>Parveen Anand</h4>
-                            <p className="text-muted">Lead Designer</p>
-                            <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Twitter Profile"><i className="fab fa-twitter"></i></a>
-                            <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Facebook Profile"><i className="fab fa-facebook-f"></i></a>
-                            <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand LinkedIn Profile"><i className="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div className="col-lg-4">
-                        <div className="team-member">
-                            <img className="mx-auto rounded-circle" src="assets/assets/img/team/2.jpg" alt="..." />
-                            <h4>Diana Petersen</h4>
-                            <p className="text-muted">Lead Marketer</p>
-                            <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Twitter Profile"><i className="fab fa-twitter"></i></a>
-                            <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Facebook Profile"><i className="fab fa-facebook-f"></i></a>
-                            <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen LinkedIn Profile"><i className="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div className="col-lg-4">
-                        <div className="team-member">
-                            <img className="mx-auto rounded-circle" src="assets/assets/img/team/3.jpg" alt="..." />
-                            <h4>Larry Parker</h4>
-                            <p className="text-muted">Lead Developer</p>
-                            <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Twitter Profile"><i className="fab fa-twitter"></i></a>
-                            <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Facebook Profile"><i className="fab fa-facebook-f"></i></a>
-                            <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker LinkedIn Profile"><i className="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col-lg-8 mx-auto text-center"><p className="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p></div>
-                </div>
-            </div>
-        </section>)
-}
+// const instructors = [
+//   { img: "img/team-1.jpg", name: "John Doe", designation: "Senior Instructor", delay: "0.1s" },
+//   { img: "img/team-2.jpg", name: "Jane Smith", designation: "Instructor", delay: "0.3s" },
+//   { img: "img/team-3.jpg", name: "Alice Johnson", designation: "Junior Instructor", delay: "0.5s" },
+//   { img: "img/team-4.jpg", name: "Bob Brown", designation: "Instructor", delay: "0.7s" }
+// ];
 
-export default Team
+// function Team() {
+//   return (
+//     <div className="container-xxl py-5">
+//       <div className="container">
+//         <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
+//           <h6 className="section-title bg-white text-center text-primary px-3">Instructors</h6>
+//           <h1 className="mb-5">Expert Instructors</h1>
+//         </div>
+//         <div className="row g-4">
+//           {instructors.map((instructor, index) => {
+//             const { ref, inView } = useInView({ triggerOnce: true });
+//             return (
+//               <div className={`col-lg-3 col-md-6 wow fadeInUp ${inView ? 'animate' : ''}`} data-wow-delay={instructor.delay} ref={ref} key={index}>
+//                 <div className="team-item bg-light">
+//                   <div className="overflow-hidden">
+//                     <img className="img-fluid" src={instructor.img} alt={instructor.name} />
+//                   </div>
+//                   <div className="position-relative d-flex justify-content-center" style={{ marginTop: -23 }}>
+//                     <div className="bg-light d-flex justify-content-center pt-2 px-1">
+//                       <a className="btn btn-sm-square btn-primary mx-1" href="#"><i className="fab fa-facebook-f"></i></a>
+//                       <a className="btn btn-sm-square btn-primary mx-1" href="#"><i className="fab fa-twitter"></i></a>
+//                       <a className="btn btn-sm-square btn-primary mx-1" href="#"><i className="fab fa-instagram"></i></a>
+//                     </div>
+//                   </div>
+//                   <div className="text-center p-4">
+//                     <h5 className="mb-0">{instructor.name}</h5>
+//                     <small>{instructor.designation}</small>
+//                   </div>
+//                 </div>
+//               </div>
+//             );
+//           })}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default Team;

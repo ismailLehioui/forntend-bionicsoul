@@ -69,3 +69,49 @@ function Contact() {
 }
 
 export default Contact
+
+
+
+
+/*import React from 'react';
+import { useInView } from 'react-intersection-observer';
+import './Contact.css';
+
+function Contact() {
+    const { ref: emailRef, inView: emailInView } = useInView({ triggerOnce: true, threshold: 0.1 });
+    const { ref: addressRef, inView: addressInView } = useInView({ triggerOnce: true, threshold: 0.1 });
+    const { ref: phoneRef, inView: phoneInView } = useInView({ triggerOnce: true, threshold: 0.1 });
+
+    return (
+        <section className="page-section" id="contact">
+            <div className="container">
+                <div className="row">
+                    <div className="col-lg-4 col-md-6">
+                        <div className={`contact-info-box ${emailInView ? 'animate' : ''}`} ref={emailRef}>
+                            <div className="icon"><i className="pe-7s-mail"></i></div>
+                            <h3>Email</h3>
+                            <p>contact@its-nt.tn <br /><br /><br /></p>
+                        </div>
+                    </div>
+                    <div className="col-lg-4 col-md-6">
+                        <div className={`contact-info-box ${addressInView ? 'animate' : ''}`} ref={addressRef}>
+                            <div className="icon"><i className="pe-7s-map-2"></i></div>
+                            <h3>Adresse</h3>
+                            <p>Sise à 102,Chotrana2, Zone industrielle, pole technologique, Ariana</p>
+                        </div>
+                    </div>
+                    <div className="col-lg-4 col-md-6 offset-lg-0 offset-md-3">
+                        <div className={`contact-info-box ${phoneInView ? 'animate' : ''}`} ref={phoneRef}>
+                            <div className="icon"><i className="pe-7s-call"></i></div>
+                            <h3>Téléphones</h3>
+                            <p>+216 70 721 003 <br /><br /><br /></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+}
+
+export default Contact;
+*/

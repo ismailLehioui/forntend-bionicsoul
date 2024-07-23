@@ -1,0 +1,29 @@
+/* Team.css */
+
+/* Animation initiale de bas en haut */
+@keyframes slideUp {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Animation d'entrée des instructeurs */
+  .animate-instructor {
+    animation: slideUp 1s ease-out;
+  }
+  
+  /* Animation au survol */
+  .team-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .team-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  

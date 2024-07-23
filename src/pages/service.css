@@ -1,0 +1,26 @@
+.service-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.service-item.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    background-color: #f0f0f0;
+    /* Changez cette couleur selon vos préférences */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.service-item .p-4 {
+    transition: color 0.3s ease;
+}
+
+.service-item:hover .p-4 {
+    color: #000000;
+    /* Changez cette couleur selon vos préférences */
+}

@@ -8,6 +8,13 @@ function Presentation() {
         threshold: 0.1,
     });
 
+    const { ref: videoRef, inView: videoInView } = useInView({
+        triggerOnce: true,
+        threshold: 0.1,
+    });
+    const videoUrl = 'https://www.linkedin.com/posts/7114771853490946048'; // URL de votre vidéo LinkedIn
+    const previewImageUrl = 'URL_DE_L_IMAGE_DE_PREVISUALISATION'; // Remplacez par l'URL de l'image de prévisualisation
+
     return (
         <section className="page-section" id="presentation">
             <div className="container">
@@ -16,13 +23,27 @@ function Presentation() {
                     <h3 className="section-subheading text-muted">Discovering New Possibilities</h3>
                 </div>
                 <div className="row">
-                    <div className="col-lg-12 wow fadeInUp" data-wow-delay="0.1s">
+                    <div className="col-lg-12">
                         <div className={`presentation-content ${textInView ? 'animate-text' : ''}`} ref={textRef}>
                             <h4>Stories of Resilience</h4>
                             <p>
                                 Meet Nadine and Hassen, two inspiring individuals who have embraced their bionic journey.
                             </p>
+                            <div className="media-content">
+                                <img src="assets/assets/img/about/1.jpg" alt="Nadine" className="media-image" />
+                                <img src="assets/assets/img/about/1.jpg" alt="Hassen" className="media-image" />
+                            </div>
                             <h5>Nadine's Story:</h5>
+                            <div>
+                                <p>
+                                    Regardez notre vidéo sur LinkedIn :
+                                    <a href={videoUrl} target="_blank" rel="noopener noreferrer">
+                                        Voir la vidéo
+                                    </a>
+                                </p>
+                                {/* Vous pouvez également ajouter une image de prévisualisation ici */}
+                            </div>
+
                             <p>
                                 Nadine, who lost her leg, now uses an advanced prosthetic limb that provides her with natural movement and sensory feedback. This technology has transformed her life, allowing her to pursue her passion for hiking and leading an active lifestyle. Nadine's journey showcases the profound impact of bionic advancements on mobility and independence.
                             </p>
@@ -37,6 +58,18 @@ function Presentation() {
                                 <li><strong>Custom Fit and Comfort:</strong> Tailored designs for a comfortable fit.</li>
                                 <li><strong>Integration with Smart Technology:</strong> Connects with smart devices for real-time data and control.</li>
                             </ul>
+                            <div className={`video-container ${videoInView ? 'animate-video' : ''}`} ref={videoRef}>
+                                <iframe
+                                    width="560"
+                                    height="315"
+                                    src="https://www.youtube.com/embed/UcMmDPPKrwA"
+                                    title="YouTube video player"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
+
                             <h4>Bionic Soul’s Commitment</h4>
                             <p>
                                 At Bionic Soul, our mission is to support and inspire those living with amputations by showcasing the latest advancements in bionic technology. We believe in a future where technology and humanity work together harmoniously, creating a world where limitations are redefined.

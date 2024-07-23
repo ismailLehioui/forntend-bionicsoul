@@ -1,0 +1,15 @@
+.contact-info-box {
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+.contact-info-box.animate {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.contact-info-box:hover {
+    transform: translateY(-10px);
+    transition: transform 0.3s ease-in-out;
+}

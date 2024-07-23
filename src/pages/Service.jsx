@@ -1,42 +1,61 @@
-import React from 'react'
+import React from 'react';
+import { useInView } from 'react-intersection-observer';
+import './service.css'; // Assurez-vous de créer ce fichier pour les styles
 
-function Service() {
+const ServiceItem = ({ delay, icon, title, description }) => {
+    const { ref, inView } = useInView({
+        triggerOnce: true,
+        threshold: 0.1,
+    });
+
     return (
-            <section className="page-section" id="services">
-                <div className="container">
-                    <div className="text-center">
-                        <h2 className="section-heading text-uppercase">Services</h2>
-                        <h3 className="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                    </div>
-                    <div className="row text-center">
-                        <div className="col-md-4">
-                            <span className="fa-stack fa-4x">
-                                <i className="fas fa-circle fa-stack-2x text-primary"></i>
-                                <i className="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
-                            </span>
-                            <h4 className="my-3">E-Commerce</h4>
-                            <p className="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                        </div>
-                        <div className="col-md-4">
-                            <span className="fa-stack fa-4x">
-                                <i className="fas fa-circle fa-stack-2x text-primary"></i>
-                                <i className="fas fa-laptop fa-stack-1x fa-inverse"></i>
-                            </span>
-                            <h4 className="my-3">Responsive Design</h4>
-                            <p className="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                        </div>
-                        <div className="col-md-4">
-                            <span className="fa-stack fa-4x">
-                                <i className="fas fa-circle fa-stack-2x text-primary"></i>
-                                <i className="fas fa-lock fa-stack-1x fa-inverse"></i>
-                            </span>
-                            <h4 className="my-3">Web Security</h4>
-                            <p className="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-    )
-}
+        <div
+            className={`col-lg-3 col-sm-6 service-item text-center pt-3 wow fadeInUp ${inView ? 'animate' : ''}`}
+            ref={ref}
+            style={{ animationDelay: `${delay}s` }}
+        >
+            <div className="p-4">
+                <i className={`fa fa-3x ${icon} text-primary mb-4`}></i>
+                <h5 className="mb-3">{title}</h5>
+                <p>{description}</p>
+            </div>
+        </div>
+    );
+};
 
-export default Service
+const Services = () => {
+    return (
+        <section className="container-xxl py-5">
+            <div className="container">
+                <div className="row g-4">
+                    <ServiceItem
+                        delay={0.1}
+                        icon="fa-graduation-cap"
+                        title="Skilled Instructors"
+                        description="Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam"
+                    />
+                    <ServiceItem
+                        delay={0.3}
+                        icon="fa-globe"
+                        title="Online Classes"
+                        description="Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam"
+                    />
+                    <ServiceItem
+                        delay={0.5}
+                        icon="fa-home"
+                        title="Home Projects"
+                        description="Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam"
+                    />
+                    <ServiceItem
+                        delay={0.7}
+                        icon="fa-book-open"
+                        title="Book Library"
+                        description="Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam"
+                    />
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default Services;
